@@ -7,12 +7,79 @@
 </head>
 <body>
 
-    <div class="app">
+    <div class="header">
         <h1 class="title">¡Bienvenido a SplitExpenses!</h1>
         <h2 class="subtitle">La app n.º 1 en gestión y control de gastos compartidos.</h2>
+   </div>
 
+   <div class="menu-body">
+        <button class="generic-button">
+            <h2 class="plain-text">Añadir participantes</h2>
+        </button>
+        <button class="generic-button">
+            <h2 class="plain-text">Añadir gasto</h2>
+        </button>
+        <button class="generic-button">
+            <h2 class="plain-text">Ver balances</h2>
+        </button>
+        <button class="generic-button">
+            <h2 class="plain-text">Buscar gasto</h2>
+        </button>
     </div>
+    
+    <div class="section">
+        <div class="participants-sub-section">
+            <h2 class="title">Participantes</h2>
 
+            <input class="generic-input"
+            type="text"
+            id="participants-input"
+            placeholder="Introduce nombres separados por comas"
+            >
+
+            <button class="input-button" id="add-participants-btn">
+                <h2 class="plain-text">Añadir</h2>
+            </button>
+            <button class="input-button" id="delete-participants-btn">
+                <h2 class="plain-text">Eliminar</h2>
+            </button>
+
+            <ul id="participants-list"></ul>
+        </div>
+
+        <div class="expenses-sub-section">
+            <h2 class="title">Gastos</h2>
+
+            <input class="generic-input"
+            type="text"
+            id="expenses-amount-input"
+            placeholder="Cantidad"
+            >
+            <input class="generic-input"
+            type="text"
+            id="expenses-concept-input"
+            placeholder="Concepto"
+            >
+            <input class="generic-input"
+            type="text"
+            id="expenses-paid_by-input"
+            placeholder="Pagador"
+            >
+            <input class="generic-input"
+            type="text"
+            id="expenses-involved-input"
+            placeholder="Implicados"
+            >
+
+            <button class="input-button" id="add-expenses-btn">
+                <h2 class="plain-text">Añadir</h2>
+            </button>
+
+            <ul id="expenses-list"></ul>
+        </div>
+    </div>
+    
+    <script src="../backend/core.js"></script>
     <script src="dist/app.js"></script>
 </body>
 </html>
