@@ -9,6 +9,18 @@ function add_participants(names, participants) {
     }
 }
 
+function delete_participants(names, participants) {
+    for (let name of names) {
+        if (!participants.includes(name)) {
+            console.log(name + " no está en el grupo.");
+        } else {
+            let index = participants.indexOf(name);
+            participants.splice(index, 1);
+            console.log(name + " ha sido eliminado del grupo.");
+        }
+    }
+}
+
 function add_expense(paid_by, amount, involved, concept, expenses, participants) {
     if (!participants.includes(paid_by)) {
         console.log(paid_by + " no está en el grupo.");
@@ -33,6 +45,6 @@ function add_expense(paid_by, amount, involved, concept, expenses, participants)
     expenses.push(expense);
 
     console.log(
-        "El gasto " + concept + " de" + amount + "€ se añadió, fue pagado por " + paid_by + ", para" + involved.join(", ")
+        "El gasto " + concept + " de " + amount + "€ se añadió, fue pagado por " + paid_by + ", para" + involved.join(", ")
     );
 }
