@@ -10,7 +10,7 @@ const expenses_amount_input = document.getElementById("expenses-amount-input");
 const expenses_involved_input = document.getElementById("expenses-involved-input");
 const expenses_concept_input = document.getElementById("expenses-concept-input");
 const add_expense_button = document.getElementById("add-expense-btn");
-const expenses_list = document.getElementById("expenses-list");1
+const expenses_list = document.getElementById("expenses-list");
 
 const delete_participants_input = document.getElementById("participants-input");
 const delete_participants_button = document.getElementById("delete-participants-btn");

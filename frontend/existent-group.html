@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SplitExpenses V.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">SplitExpenses</h1>
+        <a href="index.html" class="subtitle">Home</a>
+   </div>
+    <div class="section">
+        <div class="menu-body">
+        <button class="generic-button">
+            <h2 class="plain-text">Gastos</h2>
+        </button>
+        <button class="generic-button">
+            <h2 class="plain-text">Balances</h2>
+        </button>
+    </div>
+    <div class="section">
+        <div class="sub-section">
+        <h2 class="title">Gastos</h2> 
+        <input class="generic-input"
+        type="text"
+        id="expenses-paid_by-input"
+        placeholder="Pagador"
+        >
+        <input class="generic-input"
+        type="text"
+        id="expenses-amount-input"
+        placeholder="Cantidad"
+        >
+        <input class="generic-input"
+        type="text"
+        id="expenses-involved-input"
+        placeholder="Implicados"
+        >
+        <input class="generic-input"
+        type="text"
+        id="expenses-concept-input"
+        placeholder="Concepto"
+        >
+        <button class="input-button" id="add-expense-btn">
+            <h2 class="plain-text">Añadir</h2>
+        </button>
+
+        <ul id="expenses-list"></ul>
+    </div>
+    </div>
+        <script src="../backend/core.js"></script>
+    <script src="dist/app.js"></script>
+</body>
+</html>

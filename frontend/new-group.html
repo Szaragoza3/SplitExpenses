@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SplitExpenses V.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">SplitExpenses</h1>
+        <a href="index.html" class="subtitle">Home</a>
+   </div>
+    <div class="section">
+        <div class="sub-section">
+            <h2 class="title">Nombre del grupo</h2>
+            <input class="generic-input"
+            type="text"
+            id="group-name-input"
+            placeholder="Introduce el nombre del grupo"
+            >
+            <button class="input-button" id="add-group-name-btn">
+                <h2 class="plain-text">Añadir</h2>
+            </button>
+        </div>
+        <div class="sub-section">
+            <h2 class="title">Participantes</h2>
+
+            <input class="generic-input"
+            type="text"
+            id="participants-input"
+            placeholder="Introduce nombres separados por comas"
+            >
+
+            <button class="input-button" id="add-participants-btn">
+                <h2 class="plain-text">Añadir</h2>
+            </button>
+            <button class="input-button" id="delete-participants-btn">
+                <h2 class="plain-text">Eliminar</h2>
+            </button>
+
+            <ul id="participants-list"></ul>
+        </div>
+    </div>
+
+    <script src="../backend/core.js"></script>
+    <script src="dist/app.js"></script>
+</body>
+</html>
