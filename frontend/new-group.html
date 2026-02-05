@@ -10,39 +10,46 @@
         <h1 class="title">SplitExpenses</h1>
         <a href="index.html" class="subtitle">Home</a>
    </div>
-    <div class="section">
-        <div class="sub-section">
-            <h2 class="title">Nombre del grupo</h2>
-            <input class="generic-input"
-            type="text"
-            id="group-name-input"
-            placeholder="Introduce el nombre del grupo"
-            >
-            <button class="input-button" id="add-group-name-btn">
-                <h2 class="plain-text">Añadir</h2>
-            </button>
+   <form id="group-form">
+        <div class="section">
+            <div class="sub-section">
+                <label for="group-name-input">Nombre del proyecto</label>
+                <input 
+                    class="generic-input"
+                    type="text"
+                    id="group-name-input"
+                    placeholder="Nombre del grupo"
+                >
+            </div>
+            <div id="participants-container" class="sub-section">
+                <h2 class="title">Participantes</h2>
+                <button 
+                    type="button" 
+                    class="input-button" 
+                    id="add-participants-btn"
+                >
+                    Añadir
+                </button>
+                <input 
+                    type="text"
+                    id="participant-0"
+                    class="participant-input"
+                    placeholder="Nombre del participante"
+                    data-index="0"
+                />
+                
+            </div>
         </div>
-        <div class="sub-section">
-            <h2 class="title">Participantes</h2>
-
-            <input class="generic-input"
-            type="text"
-            id="participants-input"
-            placeholder="Introduce nombres separados por comas"
-            >
-
-            <button class="input-button" id="add-participants-btn">
-                <h2 class="plain-text">Añadir</h2>
-            </button>
-            <button class="input-button" id="delete-participants-btn">
-                <h2 class="plain-text">Eliminar</h2>
-            </button>
-
-            <ul id="participants-list"></ul>
-        </div>
-    </div>
+        <button 
+            type="submit"
+            class="input-button" 
+        >
+            Guardar proyecto
+        </button>
+    </form>
 
     <script src="../backend/core.js"></script>
-    <script src="dist/app.js"></script>
+    <script src="dist/demo.js"></script>
+    <!-- <script src="dist/app.js"></script> -->
 </body>
 </html>

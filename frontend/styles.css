@@ -1,15 +1,22 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #1d3322;
     color: #333;
+    padding-top: 100px;
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: 1d3322, 0.7;
     padding: 10px;
-    border-radius: 20px;
     margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
 .title {
@@ -34,22 +41,24 @@ body {
 }
 
 .menu-body {
-    background-color: white;
+    background-color: #8eec5f;
     padding: 10px;
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     min-height: fit-content;
+    box-shadow: 0 4px #818181;
 }
 
 .section {
-    background-color: white;
+    background-color: #8eec5f;
     border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .sub-section {
+    background-color: #8eec5f;
     width: 50%;
     min-height: fit-content;
     padding: 20px;
@@ -69,15 +78,14 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 4px #818181;
 }
 
-.input-button {
-    all: unset;
-    min-width: 175px;
-    margin: 10px;
-    background-color: #f2f2f2;
-    padding: 5px;
-    border-radius: 20px;
+.generic-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #818181;
 }
 
 input[type="text"] {
