@@ -6,50 +6,56 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
+    <div class="card card-header">
         <h1 class="title">SplitExpenses</h1>
-        <a href="index.html" class="subtitle">Home</a>
+        <h2 class="subtitle">Nuevo grupo</h2>
    </div>
-   <form id="group-form">
-        <div class="section">
-            <div class="sub-section">
-                <label for="group-name-input" class="title">Nombre del grupo</label>
-                <input 
-                    class="generic-input"
-                    type="text"
-                    id="group-name-input"
-                    placeholder="Nombre del grupo"
-                >
-            </div>
-            <div id="participants-container" class="sub-section">
-                <h2 class="title">Participantes</h2>
-                <button 
-                    type="button" 
-                    class="generic-button" 
-                    id="add-participants-btn"
-                >
-                    Añadir
-                </button>
-                <input 
-                    type="text"
-                    id="participant-0"
-                    class="participant-input"
-                    placeholder="Nombre del participante"
-                    data-index="0"
-                />
-                
-            </div>
-        </div>
-        <button 
-            type="submit"
-            class="input-button" 
+   <form class="card" id="group-form">
+        <label for="group-name-input" class="title">
+            <h2 class="subtitle">Nombre del grupo</h2>
+        </label>
+        <input 
+            type="text"
+            id="group-name-input"
+            placeholder="Introduzca el nombre del grupo"
         >
-            Guardar proyecto
+        <div class="card card-participants" id="participants-container">
+            <h2 class="subtitle">Participantes</h2>
+            <button 
+                type="button"
+                class="card-button"
+                id="add-participants-btn"
+            >
+                <h2 class="plain-text">Añadir</h2>
+            </button>
+            <input 
+                type="text"
+                id="participant-0"
+                placeholder="Introduzca el nombre del participante"
+                data-index="0"
+            />
+            
+        </div>
+        <button
+        type="submit"
+        class="card-button" 
+        >
+        <h2 class="plain-text">Guardar proyecto</h2>
         </button>
     </form>
+    <div class="card card-footer">
+        <a href="index.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Inicio</h2>
+        </a>
+        <a href="groups.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Grupos</h2>
+        </a>
+        <a href="my-account.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Mi perfil</h2>
+        </a>
+    </div>
 
     <script src="../backend/core.js"></script>
-    <script src="dist/demo.js"></script>
-    <!-- <script src="dist/app.js"></script> -->
+    <script src="dist/app.js"></script>
 </body>
 </html>
