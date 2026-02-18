@@ -9,16 +9,34 @@
 <body>
     <div class="card card-header">
         <h1 class="title">¡Bienvenido a SplitExpenses!</h1>
-        <h2 class="subtitle">La app n.º 1 en gestión y control de gastos compartidos.</h2>
+        <h2 class="subtitle">Grupo "n" - Añadir gasto</h2>
    </div>
 
    <div class="card">
-        <a href="new-group.html" class="card-button">
-            <h2 class="plain-text">Crear grupo</h2>
-        </a>
-        <a href="existent-group.html" class="card-button">
-            <h2 class="plain-text">Gestionar grupo</h2>
-        </a>
+        <h2 class="title">Gastos</h2> 
+        <input class="generic-input"
+        type="text"
+        id="expenses-paid_by-input"
+        placeholder="Pagador"
+        >
+        <input class="generic-input"
+        type="text"
+        id="expenses-amount-input"
+        placeholder="Cantidad"
+        >
+        <input class="generic-input"
+        type="text"
+        id="expenses-involved-input"
+        placeholder="Implicados"
+        >
+        <input class="generic-input"
+        type="text"
+        id="expenses-concept-input"
+        placeholder="Concepto"
+        >
+        <button class="card-button card-button-addExpense" id="add-expense-btn">
+            <h2 class="plain-text">Añadir Gasto</h2>
+        </button>
     </div>
 
     <div class="card card-footer" id="footer">

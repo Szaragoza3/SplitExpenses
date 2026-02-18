@@ -2,51 +2,42 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SplitExpenses V.0 - Manage Groups</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
+    <div class="card card-header">
         <h1 class="title">SplitExpenses</h1>
-        <a href="index.html" class="subtitle">Home</a>
+        <h2 class="subtitle">Grupo "n" - Inicio</h2>
     </div>
-    <div class="section">
-        <div class="menu-body">
-        <button class="generic-button">
+    <div class="card card-existingGroup-menu">
+        <a href="existent-group.html" class="card-button card-button-footer">
             <h2 class="plain-text">Gastos</h2>
-        </button>
-        <button class="generic-button">
+        </a>
+        <a href="participants.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Participantes</h2>
+        </a>
+        <a href="balances.html" class="card-button card-button-footer">
             <h2 class="plain-text">Balances</h2>
-        </button>
+        </a>
     </div>
-    <div class="section">
-        <div class="sub-section">
+    <div class="card">
         <h2 class="title">Gastos</h2> 
-        <input class="generic-input"
-        type="text"
-        id="expenses-paid_by-input"
-        placeholder="Pagador"
-        >
-        <input class="generic-input"
-        type="text"
-        id="expenses-amount-input"
-        placeholder="Cantidad"
-        >
-        <input class="generic-input"
-        type="text"
-        id="expenses-involved-input"
-        placeholder="Implicados"
-        >
-        <input class="generic-input"
-        type="text"
-        id="expenses-concept-input"
-        placeholder="Concepto"
-        >
-        <button class="input-button" id="add-expense-btn">
-            <h2 class="plain-text">Añadir</h2>
-        </button>
-
+        <b>Aquí irá la lista de gastos del grupo.</b>
         <ul id="expenses-list"></ul>
+    </div>
+
+        <div class="card card-footer" id="footer">
+        <a href="index.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Inicio</h2>
+        </a>
+        <a href="group-list.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Grupos</h2>
+        </a>
+        <a href="my-account.html" class="card-button card-button-footer">
+            <h2 class="plain-text">Mi perfil</h2>
+        </a>
     </div>
 
     <script src="../backend/core.js"></script>
