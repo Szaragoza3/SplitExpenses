@@ -21,6 +21,7 @@ if (groupForm) {
 
     console.log("Grupo:", state.groupName);
     console.log("Participantes:", state.participants);
+    saveGroupName();
   });
 }
 
@@ -59,6 +60,7 @@ function attachParticipantListener(input) {
   });
 }
 
+/* CAMBIAR POSICIÓN FOOTER */
 const footer = document.getElementById("footer");
 
 function updateFooterPosition() {
@@ -77,15 +79,32 @@ function updateFooterPosition() {
 window.addEventListener("load", updateFooterPosition);
 window.addEventListener("resize", updateFooterPosition);
 
-const printGroupNamebtn = document.getElementById("print-groupList-btn");
+/* GUARDAR EN LOCAL E IMPRIMIR NOMBRE DEL GRUPO */
+function saveGroupName() {
+  localStorage.setItem("groupName", state.groupName);
+}
 
-if (printGroupNamebtn) {
-  printGroupNamebtn.addEventListener("click", printGroupName)
+function loadGroupName() {
+  const saved = localStorage.getItem("groupName");
+  if (saved) {
+    state.groupName = saved;
+  }
 }
 
 function printGroupName () {
   const currentDiv = document.getElementById("group-list");
   if (!currentDiv) return;
 
-  currentDiv.textContent = state.groupName.value;
+  const link = document.createElement("a");
+  link.href = `${state.groupName}.html`
+  link.textContent = `${state.groupName}`;
+  link.classList.add("card-button");
+
+  currentDiv.appendChild(link);
+}
+
+const groupListDiv = document.getElementById("group-list");
+if (groupListDiv){
+  window.addEventListener("load", loadGroupName);
+  window.addEventListener("load", printGroupName);
 }
